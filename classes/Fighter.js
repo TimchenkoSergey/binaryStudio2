@@ -5,13 +5,13 @@ class Fighter {
         this.health = health;
     }
 
-    setDamage (damage) {
+    setDamage (damage = 10) {
         this.health = this.health - damage;
 
         console.log(`Fighter ${this.name} took damage. His HP - ${ (this.health >= 0) ? this.health : 0 }`);
     }
 
-    hit (enemy, point) {
+    hit (enemy, point = 2) {
         const damage = this.power * point;
 
         enemy.setDamage(damage);
